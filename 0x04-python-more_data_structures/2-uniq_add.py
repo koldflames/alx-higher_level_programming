@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    number = 0
-    for element in set(my_list):
-        number += element
-    return
+    unique_numbers = set()
+    total = 0
+
+    for number in my_list:
+        if number not in unique_numbers:
+            unique_numbers.add(number)
+            total += number
+
+    return total
